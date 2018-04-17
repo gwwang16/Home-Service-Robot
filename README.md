@@ -28,8 +28,11 @@ $ cd ~/catkin_ws
 $ sudo apt-get update
 $ rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
 $ cd ~/catkin_ws/src/Home-Service-Robot/shellscripts
-$ chmod +x home_service.sh
+$ chmod +x test_slam.sh
+$ chmod +x add_marker.sh
+$ chmod +x pick_objects.sh
 $ chmod +x wall_follower.sh
+$ chmod +x home_service.sh
 ```
 
 Build the project:
@@ -39,7 +42,14 @@ $ cd ~/catkin_ws
 $ catkin_make
 ```
 
-Map the environment with wall following algorithm
+#### Test SLAM
+Manually test SLAM.
+```
+$ cd ~/catkin_ws/src/Home-Service-Robot/shellscripts
+$ ./test_slam.sh
+```
+
+#### Map the environment with wall following algorithm
 
 ```
 $ cd ~/catkin_ws/src/Home-Service-Robot/shellscripts
@@ -58,10 +68,17 @@ Select the start and end positions using
 rostopic echo /amcl_pose
 ```
 
-It will display the pose info while you clicking any points on the map with `2D Pose Estimate` button.
+It will display the pose info while you clicking any points on the map in rviz with `2D Pose Estimate` button.
 
-Map navigation based on the built map
+#### Map navigation based on the built map
+
 ```
 $ cd ~/catkin_ws/src/Home-Service-Robot/shellscripts
 $ ./home_service.sh
 ```
+
+Select the mode
+
+0 - Auto mode, which would go to the start point and then to drop off position autonomously.
+
+1 - Manual mode, you can select the predefined position as goal position for this robot.

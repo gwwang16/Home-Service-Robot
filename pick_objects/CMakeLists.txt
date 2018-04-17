@@ -137,7 +137,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(pick_objects src/pick_objects.cpp)
-
+add_executable(pick_objects_beta src/pick_objects_beta.cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -150,6 +150,9 @@ add_executable(pick_objects src/pick_objects.cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(pick_objects
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(pick_objects_beta
   ${catkin_LIBRARIES}
 )
 
