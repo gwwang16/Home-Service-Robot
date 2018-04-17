@@ -2,6 +2,8 @@
 
 Ubuntu 16.04 + ROS Kinetic
 
+Video: https://youtu.be/QwSB8j20OcA
+
 ### Getting Started
 
 If you do not have an active ROS workspace, you can create one by:
@@ -23,6 +25,7 @@ Install dependencies
 
 ```
 $ cd ~/catkin_ws
+$ sudo apt-get update
 $ rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
 $ cd ~/catkin_ws/src/Home-Service-Robot/shellscripts
 $ chmod +x home_service.sh
