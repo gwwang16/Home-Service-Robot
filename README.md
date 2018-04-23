@@ -4,6 +4,11 @@ Ubuntu 16.04 + ROS Kinetic
 
 Video: https://youtu.be/QwSB8j20OcA
 
+[//]: # "Image References"
+
+[robot]:./misc_imgs/robot.jpg
+[results]:./misc_imgs/results.jpg
+
 ### Getting Started
 
 If you do not have an active ROS workspace, you can create one by:
@@ -82,3 +87,10 @@ Select the mode
 0 - Auto mode, which would go to the start point and then to drop off position autonomously.
 
 1 - Manual mode, you can select the predefined position as goal position for this robot.
+
+#### Snapshots
+
+![alt text][robot]
+
+![alt text][results]
+
