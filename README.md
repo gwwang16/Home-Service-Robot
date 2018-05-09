@@ -23,7 +23,7 @@ Clone this repo into the **src** directory of your workspace:
 
 ```
 $ cd ~/catkin_ws/src
-$ git clone xxx
+$ git clone https://github.com/gwwang16/Home-Service-Robot.git
 ```
 
 Install dependencies
